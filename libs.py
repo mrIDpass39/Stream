@@ -1,6 +1,3 @@
-from flask import Flask
+from flask import Flask, Blueprint, request, Response, url_for, send_file
 
-app = Flask(__name__)
-
-if __name__ == "__main__":
-    app.run(debug=True)
+import os, re
