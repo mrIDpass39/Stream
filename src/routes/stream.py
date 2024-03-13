@@ -16,7 +16,7 @@ def watch():
             byte1 = int(groups[0])
         if groups[1]:
             byte2 = int(groups[1])
-       
+    
     chunk, start, length, file_size = get_chunk(byte1, byte2)
     resp = Response(chunk, 206, mimetype='video/mp4',
                       content_type='video/mp4', direct_passthrough=True)

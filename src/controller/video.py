@@ -17,3 +17,7 @@ def get_chunk(byte1=None, byte2=None):
         f.seek(start)
         chunk = f.read(length)
     return chunk, start, length, file_size
+
+
+def save():
+    ...
