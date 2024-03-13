@@ -18,6 +18,13 @@ def get_chunk(byte1=None, byte2=None):
         chunk = f.read(length)
     return chunk, start, length, file_size
 
-
+# KNOCKS OF MY FEET
 def save():
-    ...
+    if 'video' in request.files:
+        return redirect(request.url)
+        ...
+    file = request.files['video']
+    filename = secure_filename(file.filename)
+    file.save(os.path.join('static', filename))
+    return redirect(url_for('watch', v=filename))
+        
